@@ -1,0 +1,92 @@
+.accordion-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.accordion-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header:hover {
+  background-color: #e9ecef;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6c757d;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.accordion-card:hover .icon {
+  color: #495057;
+}
+
+.content {
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  color: #495057;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-card {
+    max-width: 100%;
+    margin: 8px;
+  }
+
+  .header {
+    padding: 12px 16px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 12px 16px;
+  }
+}
